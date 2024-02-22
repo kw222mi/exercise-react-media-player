@@ -3,7 +3,7 @@ import "./playlist.css"
 
 const Playlist = () => {
 
-    let playListInfo =[
+    const playListInfo =[
     {
         src: "src/assets/img-6.jpg",
         artist: "Arnold Palmer",
@@ -44,7 +44,6 @@ const Playlist = () => {
         artist: "Ashton Allen",
         title: "Worshipful CHAOS"
     },
-
 ]
 
     return ( 
@@ -52,7 +51,6 @@ const Playlist = () => {
             {playListInfo.map((info) => (
                 <PlaylistItem artist={info.artist} title={info.title} src={info.src}/>
             ))}
-            
         </div>
      );
 }

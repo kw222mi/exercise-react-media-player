@@ -1,0 +1,15 @@
+body {
+    width: 800px;
+    border: solid;
+    background-color: black;
+    margin: 0 auto;
+
+}
+
+.playlist-and-player {
+    display: flex;
+    flex-direction: row;
+    background-color: pink;
+    margin: 50px auto;
+
+}

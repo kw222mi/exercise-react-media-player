@@ -1,0 +1,27 @@
+.progress-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+
+#myProgress {
+    width: 60%;
+    background-color: grey;
+    height: 10px;
+
+}
+
+#myBar {
+    width: 1%;
+    height: 10px;
+    background-color: rgb(151, 95, 243);
+
+}
+
+.progress-text {
+    margin-left: 10px;
+    margin-right: 10px;
+}

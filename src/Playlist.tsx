@@ -49,7 +49,10 @@ const Playlist = () => {
 
     return ( 
         <div className="playlist-container">
-            <PlaylistItem artist="Arnold Palmer" title="Coffee Limit" src="src/assets/img-5.jpg"/>
+            {playListInfo.map((info) => (
+                <PlaylistItem artist={info.artist} title={info.title} src={info.src}/>
+            ))}
+            
         </div>
      );
 }

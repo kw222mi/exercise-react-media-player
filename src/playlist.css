@@ -1,0 +1,7 @@
+.playlist-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(116, 114, 114);
+    flex: 1;
+
+}

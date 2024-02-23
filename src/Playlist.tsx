@@ -1,58 +1,33 @@
+
 import PlaylistItem from "./PlaylistItem";
 import "./playlist.css"
+import {IplayListInfo} from "./App"
 
-const Playlist = () => {
+  interface IplayListProps {
+    playListInfo:IplayListInfo[]
+    handleClick:(id:number)=> void
+}
 
-    const playListInfo =[
-    {
-        src: "src/assets/img-6.jpg",
-        artist: "Arnold Palmer",
-        title: "Coffee Limit"
-    },
-    {
-        src: "src/assets/img-7.jpg",
-        artist: "Darryl Raine",
-        title: "Rapturous Dreamscape"
-    },
-    {
-        src: "src/assets/img-1.jpg",
-        artist: "Silver",
-        title: "I Still Believe In you"
-    },
-    {
-        src: "src/assets/img-2.jpg",
-        artist: "Bradley Nelson",
-        title: "Energetic Silence"
-    },
-    {
-        src: "src/assets/img-3.jpg",
-        artist: "Bobby Money",
-        title: "Cool nights"
-    },
-    {
-        src: "src/assets/img-4.jpg",
-        artist: "Jimmie Gear",
-        title: "Silver love"
-    },
-    {
-        src: "src/assets/img-5.jpg",
-        artist: "Teddie Russell",
-        title: "Private backseat kiss"
-    },
-    {
-        src: "src/assets/song-image.png",
-        artist: "Ashton Allen",
-        title: "Worshipful CHAOS"
-    },
-]
 
-    return ( 
+const Playlist= (props:IplayListProps) => {
+      
+
+
+
+    return (
         <div className="playlist-container">
-            {playListInfo.map((info) => (
-                <PlaylistItem artist={info.artist} title={info.title} src={info.src}/>
+            {props.playListInfo.map((info) => (
+                <PlaylistItem
+                    listId={info.id} // Use a different name for the id
+                    key={info.id} // Keep the key for React's internal use
+                    handleClick={props.handleClick}
+                    artist={info.artist}
+                    title={info.title}
+                    src={info.src}
+                />
             ))}
         </div>
-     );
+    );
 }
  
 export default Playlist;

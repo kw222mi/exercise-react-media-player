@@ -5,15 +5,20 @@ import ProgressBar from "./ProgressBar";
 import SongInfo from "./SongInfo";
 import "./MediaPlayer.css"
 
+  interface IMediaPlayerProps {
+        src: string;
+        artist: string;
+        title: string;
+        id?: number;
+    }
 
-const MediaPlayer = () => {
+const MediaPlayer = (props:IMediaPlayerProps) => {
+  
     return ( 
-
-
         <div className="mediaplayer-container">
             <MediaPlayerTopBar />
-            <AlbumImage src="./src/assets/img-1.jpg"/>
-            <SongInfo artist="Ashton Allen" title="Worshipful CHAOS"/>  
+            <AlbumImage src={props.src}/>
+            <SongInfo artist={props.artist} title={props.title}/>  
             <ProgressBar />
             <Player />
 
